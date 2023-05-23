@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 export default function Root() {
   return (
@@ -8,28 +8,28 @@ export default function Root() {
         <nav>
           <ul>
             <li>
-              <a href={`/routes/Inicio`}>Inicio</a>
+              <Link to={`/routes/Inicio`}>Inicio</Link>
             </li>
             <li>
-              <a href={`/routes/Abastecimiento`}>Abastecimiento</a>
+              <Link to={`/routes/Abastecimiento`}>Abastecimiento</Link>
             </li>
             <li>
-              <a href={`/routes/Administrativa`}>Administrativa</a>
+              <Link to={`/routes/Administrativa`}>Administrativa</Link>
             </li>
             <li>
-              <a href={`/routes/Contabilidad`}>Contabilidad</a>
+              <Link to={`/routes/Contabilidad`}>Contabilidad</Link>
             </li>
             <li>
-              <a href={`/routes/Directiva`}>Directiva</a>
+              <Link to={`/routes/Directiva`}>Directiva</Link>
             </li>
             <li>
-              <a href={`/routes/Dis`}>Distribución y Tarifa</a>
+              <Link to={`/routes/Dis`}>Distribución y Tarifa</Link>
             </li>
             <li>
-              <a href={`/routes/Operador`}>Operador</a>
+              <Link to={`/routes/Operador`}>Operador</Link>
             </li>
             <li>
-              <a href={`/routes/Trat`}>Tatamiento y Regulación</a>
+              <Link to={`/routes/Trat`}>Tatamiento y Regulación</Link>
             </li>
           </ul>
         </nav>
