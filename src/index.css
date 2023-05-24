@@ -78,6 +78,7 @@ form[action$="destroy"] button {
 }
 
 .content {
+  width: 100%;
   margin-left: 19%;
 }
 
@@ -213,4 +214,27 @@ i {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+#inicio {
+  display: flex;
+  flex-direction: column;
+}
+
+#inicio h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
+#inicio p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.25rem;
+}
+
+#inicio h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.25rem;
 }

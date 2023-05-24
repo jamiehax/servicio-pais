@@ -2,18 +2,18 @@ export default function Inicio() {
     return (   
         <>
             <body>
-                <div class="container">
+                <div class="container" id="inicio">
                     <h1>Inicio</h1>
                     <ul>
                         <li>
-                            <h7>
+                            <p>
                                 Utilice la navegación a la izquierda para ir a las distintas fichas.
-                            </h7>
+                            </p>
                         </li>
                         <li>
-                            <h7>
+                            <p>
                                 Rellene los formularios y pulse el botón de envío en el fondo de cada uno para enviarlo.
-                            </h7>
+                            </p>
                         </li><br/>
                         <li>
                             <h4>
@@ -21,12 +21,13 @@ export default function Inicio() {
                             </h4>
                             <ul>
                                 <li>
-                                    Si cambia de página antes de enviar el formulario, perderá toda la información.
+                                    <p>
+                                        Si cambia de página antes de enviar el formulario, perderá toda la información.
+                                    </p>
                                 </li>
                             </ul>
                         </li>
                     </ul>                    
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
                 </div>
             </body>
         </> 
