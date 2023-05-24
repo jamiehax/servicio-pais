@@ -7,17 +7,17 @@ import {
 
 import "./index.css";
 
-import Root from "./routes/Root";
-import ErrorPage from "./routes/ErrorPage";
+import Root from "./Root";
+import ErrorPage from "./fichas/ErrorPage";
 
-import Inicio from './routes/Inicio';
-import Abastecimiento from './routes/Abastecimiento';
-import Administrativa from './routes/Administrativa';
-import Contabilidad from './routes/Contabilidad';
-import Directiva from './routes/Directiva';
-import Dis from './routes/Dis';
-import Operador from './routes/Operador';
-import Trat from './routes/Trat';
+import Inicio from './fichas/Inicio';
+import Abastecimiento from './fichas/Abastecimiento';
+import Administrativa from './fichas/Administrativa';
+import Contabilidad from './fichas/Contabilidad';
+import Directiva from './fichas/Directiva';
+import Dis from './fichas/Dis';
+import Operador from './fichas/Operador';
+import Trat from './fichas/Trat';
 
 const router = createBrowserRouter([
   {
@@ -26,35 +26,35 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "routes/Inicio",
+        path: "fichas/Inicio",
         element: <Inicio />,
       },
       {
-        path: "routes/Abastecimiento",
+        path: "fichas/Abastecimiento",
         element: <Abastecimiento />,
       },
       {
-        path: "routes/Contabilidad",
+        path: "fichas/Contabilidad",
         element: <Contabilidad />,
       },
       {
-        path: "routes/Directiva",
+        path: "fichas/Directiva",
         element: <Directiva />,
       },
       {
-        path: "routes/Dis",
+        path: "fichas/Dis",
         element: <Dis />,
       },
       {
-        path: "routes/Administrativa",
+        path: "fichas/Administrativa",
         element: <Administrativa />,
       },
       {
-        path: "routes/Operador",
+        path: "fichas/Operador",
         element: <Operador />,
       },
       {
-        path: "routes/Trat",
+        path: "fichas/Trat",
         element: <Trat />,
       },
     ]

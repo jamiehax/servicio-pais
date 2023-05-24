@@ -72,6 +72,15 @@ form[action$="destroy"] button {
   border-width: 0;
 }
 
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  margin-left: 19%;
+}
+
 #root {
   display: flex;
   height: 100%;
@@ -81,15 +90,16 @@ form[action$="destroy"] button {
 #sidebar {
   height: 100%;
   width: 17rem;
-  background-color: #f7f7f7;
+  background-color: #b4e7ff;
   border-right: solid 1px #e3e3e3;
   display: flex;
   flex-direction: column;
+  position: fixed;
 }
 
 #sidebar > * {
   padding-left: 2rem;
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 #sidebar h1 {
@@ -99,7 +109,15 @@ form[action$="destroy"] button {
   align-items: center;
   margin: 0;
   padding: 1rem 2rem;
-  border-top: 1px solid #e3e3e3;
+  padding-bottom: 0rem;
+  line-height: 1;
+}
+
+#sidebar h2 {
+  font-size: 1.4rem;
+  font-weight: 750;
+  display: flex;
+  align-items: center;
   line-height: 1;
 }
 
@@ -145,6 +163,7 @@ i {
 
 #sidebar li {
   margin: 0.25rem 0;
+  padding-left: 1rem;
 }
 
 #sidebar nav a {
@@ -154,7 +173,8 @@ i {
   overflow: hidden;
 
   white-space: pre;
-  padding: 0.5rem;
+  padding: 0.75rem;
+  padding-right: 9.4rem;
   border-radius: 8px;
   color: inherit;
   text-decoration: none;
@@ -162,7 +182,7 @@ i {
 }
 
 #sidebar nav a:hover {
-  background: #e3e3e3;
+  background: #ffffff93;
 }
 
 #sidebar nav a.active {
