@@ -7,13 +7,23 @@ export default function Inicio() {
                     <ul>
                         <li>
                             <h7>
-                                Utilice la navegación de la izquierda para ir a las distintas fichas.
+                                Utilice la navegación a la izquierda para ir a las distintas fichas.
                             </h7>
                         </li>
                         <li>
                             <h7>
                                 Rellene los formularios y pulse el botón de envío en el fondo de cada uno para enviarlo.
                             </h7>
+                        </li><br/>
+                        <li>
+                            <h4>
+                                ¡Ojo!
+                            </h4>
+                            <ul>
+                                <li>
+                                    Si cambia de página antes de enviar el formulario, perderá toda la información.
+                                </li>
+                            </ul>
                         </li>
                     </ul>                    
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

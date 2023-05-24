@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import React from "react";
 
 import Root from "./Root";
@@ -14,14 +13,14 @@ import Operador from './fichas/Operador';
 import Trat from './fichas/Trat';
 import { BrowserRouter } from 'react-router-dom';
 
-
 export default function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Root />}>
+          <Route path='/' element={<Root />} errorElement={<ErrorPage />}>
             <Route index element={<Inicio />} />
+            <Route path='fichas/Inicio' element={<Inicio />} />
             <Route path='fichas/Abastecimiento' element={<Abastecimiento />} />
             <Route path='fichas/Administrativa' element={<Administrativa />} />
             <Route path='fichas/Contabilidad' element={<Contabilidad />} />
@@ -29,7 +28,7 @@ export default function App() {
             <Route path='fichas/Dis' element={<Dis />} />
             <Route path='fichas/Operador' element={<Operador />} />
             <Route path='fichas/Trat' element={<Trat />} />
-            <Route path='*' element={<ErrorPage />} />
+            <Route path='*' errorElement={<ErrorPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

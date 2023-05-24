@@ -7,7 +7,7 @@ export default function Root() {
         <h1>Fichas</h1>
         <nav>
           <h2>
-            <NavLink to={`/fichas/Inicio`}>Inicio</NavLink>
+            <NavLink index to={`/fichas/Inicio`}>Inicio</NavLink>
           </h2>
           <ul>
             <li>

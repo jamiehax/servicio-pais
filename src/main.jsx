@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
+  createRoutesFromElements,
   RouterProvider,
+  Route
 } from "react-router-dom";
 
 import "./index.css";
@@ -19,47 +21,22 @@ import Dis from './fichas/Dis';
 import Operador from './fichas/Operador';
 import Trat from './fichas/Trat';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "fichas/Inicio",
-        element: <Inicio />,
-      },
-      {
-        path: "fichas/Abastecimiento",
-        element: <Abastecimiento />,
-      },
-      {
-        path: "fichas/Contabilidad",
-        element: <Contabilidad />,
-      },
-      {
-        path: "fichas/Directiva",
-        element: <Directiva />,
-      },
-      {
-        path: "fichas/Dis",
-        element: <Dis />,
-      },
-      {
-        path: "fichas/Administrativa",
-        element: <Administrativa />,
-      },
-      {
-        path: "fichas/Operador",
-        element: <Operador />,
-      },
-      {
-        path: "fichas/Trat",
-        element: <Trat />,
-      },
-    ]
-  }
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Root />} errorElement={<ErrorPage />}>
+      <Route index element={<Inicio />} />
+      <Route path='fichas/Inicio' element={<Inicio />} />
+      <Route path='fichas/Abastecimiento' element={<Abastecimiento />} />
+      <Route path='fichas/Administrativa' element={<Administrativa />} />
+      <Route path='fichas/Contabilidad' element={<Contabilidad />} />
+      <Route path='fichas/Directiva' element={<Directiva />} />
+      <Route path='fichas/Dis' element={<Dis />} />
+      <Route path='fichas/Operador' element={<Operador />} />
+      <Route path='fichas/Trat' element={<Trat />} />
+      <Route path='*' element={<ErrorPage />} />
+    </Route>
+  )
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
