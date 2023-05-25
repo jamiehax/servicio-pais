@@ -29,7 +29,7 @@ export default function Root() {
               <NavLink to={`/fichas/Operador`}>Operador</NavLink>
             </li>
             <li>
-              <NavLink to={`/fichas/Trat`}>Tatamiento y Regulación</NavLink>
+              <NavLink to={`/fichas/Trat`}>Tratamiento y Regulación</NavLink>
             </li>
           </ul>
         </nav>

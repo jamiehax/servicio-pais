@@ -4,6 +4,9 @@ export default function Inicio() {
             <body>
                 <div class="container" id="inicio">
                     <h1>Inicio</h1>
+                    <h4>
+                        Instrucciones
+                    </h4>
                     <ul>
                         <li>
                             <p>
@@ -14,20 +17,18 @@ export default function Inicio() {
                             <p>
                                 Rellene los formularios y pulse el botón de envío en el fondo de cada uno para enviarlo.
                             </p>
-                        </li><br/>
-                        <li>
-                            <h4>
-                                ¡Ojo!
-                            </h4>
-                            <ul>
-                                <li>
-                                    <p>
-                                        Si cambia de página antes de enviar el formulario, perderá toda la información.
-                                    </p>
-                                </li>
-                            </ul>
                         </li>
-                    </ul>                    
+                    </ul>
+                    <h4>
+                        ¡Ojo!
+                    </h4>
+                    <ul>
+                        <li>
+                            <p>
+                                Si cambia de página antes de enviar el formulario, perderá toda la información.
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </body>
         </> 
