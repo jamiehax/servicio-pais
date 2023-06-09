@@ -143,12 +143,11 @@ export default function Directiva() {
 
                 <h7>¿Participa de Actividades Interorganizacionales?</h7>
                 <div class="col-12">
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="si" autocomplete="off"/> Sí
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="no" autocomplete="off"/> No
-                    </label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                    </select>
                 </div>
                 <div class="col-12">
                     <label for="inputEmail4" class="form-label">¿Cuales acciones de trabajo conjunto cuentan con?</label>
@@ -157,12 +156,11 @@ export default function Directiva() {
 
                 <h7>¿Desde el municipio existe un apoyo en temas de agua?</h7>
                 <div class="col-12">
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="si" autocomplete="off"/> Sí
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="no" autocomplete="off"/> No
-                    </label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                     </select>
                 </div>
                 <div class="col-12">
                     <label for="inputEmail4" class="form-label">¿Quienes y en que area?</label>

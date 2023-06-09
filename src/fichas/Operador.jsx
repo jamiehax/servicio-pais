@@ -20,27 +20,16 @@ export default function Operador() {
           
                 <h3>Financiameinto de la Capacatación</h3>
                 <div class="col-12">
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="si" autocomplete="off"/> Unidad Tecnica
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="no" autocomplete="off"/> DOH
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="si" autocomplete="off"/> DGA
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="no" autocomplete="off"/> Subdere
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="si" autocomplete="off"/> Municipal
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="no" autocomplete="off"/> Universidad
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="espacio-fisico" id="si" autocomplete="off"/> Otro
-                    </label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="Unidad Tecnica">Unidad Tecnica</option>
+                        <option value="DOH">DOH</option>
+                        <option value="DGA">DGA</option>
+                        <option value="Subdere">Subdere</option>
+                        <option value="Municipal">Municipal</option>
+                        <option value="Universidad">Universidad</option>
+                        <option value="Otro">Otro</option>
+                    </select>
                 </div>
                 <div class="col-md-12">
                     <label class="form-label">Si selecionó otro, ¿cual?</label>

@@ -27,49 +27,16 @@ body {
   line-height: 1.5;
   color: #121212;
 }
-textarea,
-input,
-button {
-  font-size: 1rem;
-  font-family: inherit;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 0.75rem;
-  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
-  background-color: white;
-  line-height: 1.5;
-  margin: 0;
-}
-button {
-  color: #3992ff;
-  font-weight: 500;
-}
 
 textarea:hover,
 input:hover,
+select:hover,
 button:hover {
   box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
 }
 
-button:active {
-  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
-  transform: translateY(1px);
-}
-
 form[action$="destroy"] button {
   color: #f44250;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
 }
 
 .main {
@@ -79,7 +46,9 @@ form[action$="destroy"] button {
 
 .content {
   width: 100%;
-  margin-left: 19%;
+  margin-left: 16rem;
+  position: relative;
+  display: inline-flex;
 }
 
 #root {
@@ -90,16 +59,16 @@ form[action$="destroy"] button {
 
 #sidebar {
   height: 100%;
-  width: 17rem;
+  width: 16rem;
   background-color: #b4e7ff;
-  border-right: solid 1px #e3e3e3;
+  border-right: solid 4px #0d1f92;
   display: flex;
   flex-direction: column;
   position: fixed;
 }
 
 #sidebar > * {
-  padding-left: 2rem;
+  padding-left: 1rem;
   padding-right: 1rem;
 }
 
@@ -214,6 +183,23 @@ i {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+#submit-response h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.error-message {
+  color: #be2532;
+  font-size: 0.85rem;
+}
+
+#submit-response p {
+  padding-left: 2rem;
 }
 
 #inicio {
