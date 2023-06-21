@@ -15,17 +15,7 @@ export default function Inicio() {
                         </li>
                         <li>
                             <p>
-                                Rellene los formularios y pulse el botón de envío en el fondo de cada uno para enviarlo.
-                            </p>
-                        </li>
-                    </ul>
-                    <h4>
-                        ¡Ojo!
-                    </h4>
-                    <ul>
-                        <li>
-                            <p>
-                                Si cambia de página antes de enviar el formulario, perderá toda la información.
+                                Utilice el cuadro de búsqueda de la parte superior de la página para buscar en las fichas.
                             </p>
                         </li>
                     </ul>

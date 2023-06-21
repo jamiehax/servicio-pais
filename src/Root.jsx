@@ -3,7 +3,7 @@ import { Outlet, NavLink } from "react-router-dom";
 export default function Root() {
   return (
     <>
-      <div class="main" id="sidebar">
+      <div className="main" id="sidebar">
         <h1>Fichas</h1>
         <nav>
           <h2>
