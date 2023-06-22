@@ -4,20 +4,21 @@ import SearchFicha from '../SearchFicha';
 export default function Contabilidad() {
 
     const putInfo = data => {
+        // show footer and the information div
         document.getElementById("info-div").hidden = false;
         document.getElementById("fundacion-footer").hidden = false;
         
-        // fill in elements
+        // fill in elements in the information div
         const infoDiv = document.getElementById("info-div");
         const pElements = infoDiv.getElementsByTagName("p");
 
         for (const p of pElements) {
-            p.innerHTML = data.data[1].email;
+            p.innerHTML = data.token;
         };
-
     };
 
     function clearInfo() {
+        // clear information put in the div
         const infoDiv = document.getElementById("info-div");
         const pElements = infoDiv.getElementsByTagName("p");
 
@@ -25,6 +26,7 @@ export default function Contabilidad() {
             p.innerHTML = "";
         }
 
+        // hide the information div and the footer
         document.getElementById("info-div").hidden = true;
         document.getElementById("fundacion-footer").hidden = true;
     };

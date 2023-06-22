@@ -4,29 +4,30 @@ import SearchFicha from '../SearchFicha';
 export default function Abastecimiento() {
 
   const putInfo = data => {
-        document.getElementById("info-div").hidden = false;
-        document.getElementById("fundacion-footer").hidden = false;
-        
-        // fill in elements
-        const infoDiv = document.getElementById("info-div");
-        const pElements = infoDiv.getElementsByTagName("p");
+    // show footer and the information div
+    document.getElementById("info-div").hidden = false;
+    document.getElementById("fundacion-footer").hidden = false;
+    
+    // fill in elements in the information div
+    const infoDiv = document.getElementById("info-div");
+    const pElements = infoDiv.getElementsByTagName("p");
+    for (const p of pElements) {
+      p.innerHTML = data.token;
+    }
+  };
 
-        for (const p of pElements) {
-            p.innerHTML = data.token;
-        }
-    };
+  function clearInfo() {
+    // clear information put in the div
+    const infoDiv = document.getElementById("info-div");
+    const pElements = infoDiv.getElementsByTagName("p");
+    for (const p of pElements) {
+      p.innerHTML = "";
+    }
 
-    function clearInfo() {
-        const infoDiv = document.getElementById("info-div");
-        const pElements = infoDiv.getElementsByTagName("p");
-
-        for (const p of pElements) {
-            p.innerHTML = "";
-        }
-
-        document.getElementById("info-div").hidden = true;
-        document.getElementById("fundacion-footer").hidden = true;
-    };
+    // hide the information div and the footer
+    document.getElementById("info-div").hidden = true;
+    document.getElementById("fundacion-footer").hidden = true;
+  };
   
     return (
         <>

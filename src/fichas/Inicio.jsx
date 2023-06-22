@@ -10,7 +10,7 @@ export default function Inicio() {
                     <ul>
                         <li>
                             <p>
-                                Utilice la navegación a la izquierda para ir a las distintas fichas.
+                                Utilice la navegación para ir a las distintas fichas.
                             </p>
                         </li>
                         <li>

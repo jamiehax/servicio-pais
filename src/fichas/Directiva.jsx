@@ -4,10 +4,11 @@ import SearchFicha from '../SearchFicha';
 export default function Directiva() {
 
     const putInfo = data => {
+        // show footer and the information div
         document.getElementById("info-div").hidden = false;
         document.getElementById("fundacion-footer").hidden = false;
         
-        // fill in elements
+        // fill in elements in the information div
         const infoDiv = document.getElementById("info-div");
         const pElements = infoDiv.getElementsByTagName("p");
 
@@ -17,6 +18,7 @@ export default function Directiva() {
     };
 
     function clearInfo() {
+        // clear information put in the div
         const infoDiv = document.getElementById("info-div");
         const pElements = infoDiv.getElementsByTagName("p");
 
@@ -24,6 +26,7 @@ export default function Directiva() {
             p.innerHTML = "";
         }
 
+        // hide the information div and the footer
         document.getElementById("info-div").hidden = true;
         document.getElementById("fundacion-footer").hidden = true;
     };
@@ -54,7 +57,7 @@ export default function Directiva() {
                         <p class="info" id="directiva1"></p>
                     </div>
 
-                    <div class="col-lg-2">
+                    {/* <div class="col-lg-2">
                         <h5>Titulo</h5>
                     </div>
                     <div class="col-lg-4">
@@ -65,83 +68,101 @@ export default function Directiva() {
                     </div>
                     <div class="col-lg-3">
                         <h5>Fono</h5>
-                    </div>
+                    </div> */}
 
-                    <div class="col-lg-2">
-                        <h6>Presidente</h6>
+                    <div class="col-lg-12">
+                        <h4>Presidente</h4>
                     </div>
                     <div class="col-lg-4">
+                        <label>Nombre:</label>
                         <p class="info" id="directiva1"></p>
-                    </div>
-                    <div class="col-lg-3">
-                        <p class="info" id="directiva1"></p>
-                    </div>
-                    <div class="col-lg-3">
-                        <p class="info" id="directiva1"></p>
-                    </div>
-
-                    <div class="col-lg-2">
-                        <h6>Secretario</h6>
                     </div>
                     <div class="col-lg-4">
+                        <label>RUT:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
-                    <div class="col-lg-3">
-                        <p class="info" id="directiva1"></p>
-                    </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
+                        <label>Fono:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
 
-                    <div class="col-lg-2">
-                        <h6>Tesorero</h6>
+                    <div class="col-lg-12">
+                        <h4>Secretario</h4>
                     </div>
                     <div class="col-lg-4">
+                        <label>Nombre:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
+                        <label>RUT:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
+                        <label>Fono:</label>
+                        <p class="info" id="directiva1"></p>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <h4>Tesorero</h4>
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Nombre:</label>
+                        <p class="info" id="directiva1"></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <label>RUT:</label>
+                        <p class="info" id="directiva1"></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Fono:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
                     
-                    <div class="col-lg-2">
-                        <h6>1° Director(a)</h6>
+                    <div class="col-lg-12">
+                        <h4>1° Director(a)</h4>
                     </div>
                     <div class="col-lg-4">
+                        <label>Nombre:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
+                        <label>RUT:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
+                        <label>Fono:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
 
-                    <div class="col-lg-2">
-                        <h6>2° Director(a)</h6>
+                    <div class="col-lg-12">
+                        <h4>2° Director(a)</h4>
                     </div>
                     <div class="col-lg-4">
+                        <label>Nombre:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
+                        <label>RUT:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
+                        <label>Fono:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
 
-                    <div class="col-lg-2">
-                        <h6>3° Director(a)</h6>
+                    <div class="col-lg-12">
+                        <h4>3° Director(a)</h4>
                     </div>
                     <div class="col-lg-4">
+                        <label>Nombre:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
+                        <label>RUT:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
+                        <label>Fono:</label>
                         <p class="info" id="directiva1"></p>
                     </div>
 

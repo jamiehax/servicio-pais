@@ -35,9 +35,13 @@ button:hover {
   box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 3px 4px hsla(0, 0%, 0%, 0.2);
 }
 
-.main {
+.desktop-nav {
   display: flex;
   flex-direction: row;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 .content {
@@ -155,6 +159,7 @@ i {
 #sidebar nav a.active {
   background: hsl(224, 75%, 60%);
   color: white;
+  font-style: italic;
 }
 
 #sidebar nav a.pending {
@@ -204,7 +209,6 @@ i {
 
 .info-image {
   padding: 0.2rem;
-  background-color: #53acff;
   border-radius: 0.5rem;
 }
 
@@ -239,6 +243,7 @@ i {
 }
 
 .search-status {
+  overflow-wrap: break-word;
   background-color: #fff0bedf;
   font-size: 1.75rem;
   font-weight: 600;
@@ -316,4 +321,64 @@ a:visited {
 h1 {
   margin-top: 1rem;
   margin-left: 2px;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+      display: none;
+  }
+
+  .content {
+    margin-left: 0rem;
+    display: block;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    background-color: #b4e7ff;
+    border-bottom: solid 4px #0d1f92;
+    padding: 0.5rem;
+  }
+
+  .mobile-nav nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .mobile-nav-link-div,
+  .mobile-nav-link-div-home {
+    margin: 0.25rem;
+    flex: 1 1 auto;
+    background-color: #ffffff93;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    border: solid 2px #0d1f92;
+  }
+
+  .mobile-nav-link-div-home {
+    width: 100%;
+  }
+
+  #topbar nav a.active {
+    background: hsl(224, 75%, 60%);
+    color: white;
+    font-weight: 650;
+    font-size: 1.1rem;
+    font-style: italic;
+  }
+
+  .mobile-nav nav a {
+    text-decoration: none;
+  }
+  
+  #root {
+    display: block;
+  }
+  
 }

@@ -2,9 +2,11 @@ import { React } from 'react';
 
 export default function SearchFicha({ putInfo, clearInfo }) {
 
+    // url of the api
     const API_ENDPOINT = "https://reqres.in/api/users?page=2";
 
     const search = async () => {
+        // post the data and handle the result
         // const numFicha = document.getElementById("numFicha").value;
         // const data = {num: numFicha};
         // console.log(data);
@@ -18,9 +20,11 @@ export default function SearchFicha({ putInfo, clearInfo }) {
         //     "email": "sydney@fife"
         // };
 
+        // update search status and clear the info in the div
         updateStatus("buscando...");
         clearInfo();
 
+        // handle the response
         try {
             const response = await fetch(API_ENDPOINT, {
                 method: "GET",
@@ -40,11 +44,13 @@ export default function SearchFicha({ putInfo, clearInfo }) {
         }  
     }
 
+    // call the function from the ficha passed as a hook to put the data
     function displayInfo(result) {
         updateStatus("ficha: "+document.getElementById("numFicha").value);
         putInfo(result)
     }
 
+    // call the function from the ficha passed as a hook to clear the data
     function updateStatus(status) {
         document.getElementById("searchStatus").innerHTML = status;
     }

@@ -4,13 +4,14 @@ import SearchFicha from '../SearchFicha';
 export default function Trat() {
 
     const putInfo = data => {
+        // show footer, both information divs, and hide title
         document.getElementById("info-div-trat").hidden = false;
         document.getElementById("info-div-reg").hidden = false;
         document.getElementById("fundacion-footer").hidden = false;
         document.getElementById("unloaded-title").hidden = true;
         document.getElementById("loaded-title").hidden = false;
         
-        // fill in elements
+        // fill in elements in both information divs
         const infoDivTrat = document.getElementById("info-div-trat");
         const pElementsTrat = infoDivTrat.getElementsByTagName("p");
 
@@ -32,6 +33,7 @@ export default function Trat() {
     };
 
     function clearInfo() {
+        // clear information put in both the information divs
         const infoDivTrat = document.getElementById("info-div-trat");
         const pElementsTrat = infoDivTrat.getElementsByTagName("p");
 
@@ -46,6 +48,7 @@ export default function Trat() {
             p.innerHTML = "";
         }
 
+        // hide both the information divs, the footer, and show the title
         document.getElementById("info-div-trat").hidden = true;
         document.getElementById("info-div-reg").hidden = true;
         document.getElementById("fundacion-footer").hidden = true;
