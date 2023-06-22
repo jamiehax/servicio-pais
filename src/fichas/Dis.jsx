@@ -16,7 +16,23 @@ export default function Dis() {
             p.innerHTML = data.token;
         };
 
-        document.getElementById("dis-foto").src = data.data[1].avatar;
+        let images = [
+            data.data[0].avatar,
+            data.data[1].avatar,
+            data.data[2].avatar,
+            data.data[3].avatar,
+            data.data[4].avatar,
+            data.data[5].avatar,
+        ];
+
+        // fill in photos for trat information divs
+        const tratImageDiv = document.getElementById("dis-foto-div");
+        for (const i of images) {
+            const img = document.createElement("img");
+            img.src = i;
+            img.classList.add("info-img");
+            tratImageDiv.appendChild(img);
+        };
     };
 
     function clearInfo() {
@@ -27,6 +43,12 @@ export default function Dis() {
         for (const p of pElements) {
             p.innerHTML = "";
         }
+
+        // clear images put in trat photo div
+        const tratImageDiv = document.getElementById("dis-foto-div");
+        while (tratImageDiv.firstChild) {
+            tratImageDiv.removeChild(tratImageDiv.firstChild);
+        };
 
         // hide the information div and the footer
         document.getElementById("info-div").hidden = true;
@@ -39,7 +61,7 @@ export default function Dis() {
 
                 {<SearchFicha putInfo={putInfo} clearInfo={clearInfo} />}
 
-                <h1>Información sistema de Distribución</h1>
+                <h1>Información sistema de Distribución y Tarifa</h1>
 
                 <div class="row" id="info-div" hidden>
                     
@@ -97,9 +119,9 @@ export default function Dis() {
                         <p class="info" id="dis1"></p>
                     </div>
 
-                    <h2>Plano de la Red</h2>
-                    <div class="col-12">
-                        <img class="info-image" id="dis-foto" alt="no hay fotos" src=""></img>
+                    <h2>Plano de la Red (Fotos)</h2>
+                    <div class="col-lg-12">
+                        <div class="image-div" id="dis-foto-div"></div>
                     </div>
 
                     <h2>Información Sistema de Tarifas</h2>

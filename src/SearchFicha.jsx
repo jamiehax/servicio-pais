@@ -58,9 +58,9 @@ export default function SearchFicha({ putInfo, clearInfo }) {
     return (    
         <>
             <div class="search">
-                <h3>
+                <h4>
                     Buscar las fichas por ID (número):
-                </h3>
+                </h4>
                 <div class="search-input-group">
                     <button class="search-button" onClick={() => {search()}}>
                         Buscar

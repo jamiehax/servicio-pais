@@ -11,42 +11,90 @@ export default function Trat() {
         document.getElementById("unloaded-title").hidden = true;
         document.getElementById("loaded-title").hidden = false;
         
-        // fill in elements in both information divs
+        // fill in elements in trat information div
         const infoDivTrat = document.getElementById("info-div-trat");
         const pElementsTrat = infoDivTrat.getElementsByTagName("p");
-
         for (const p of pElementsTrat) {
             p.innerHTML = data.data[1].email;
         };
 
+        // fill in elements in reg information divs
         const infoDivReg = document.getElementById("info-div-reg");
         const pElementsReg = infoDivReg.getElementsByTagName("p");
-
         for (const p of pElementsReg) {
             p.innerHTML = data.data[1].email;
         };
 
-        document.getElementById("trat-foto").src = data.data[1].avatar;
-        document.getElementById("reg-foto-1").src = data.data[2].avatar;
-        document.getElementById("reg-foto-2").src = "";
+        let images = [
+            data.data[0].avatar,
+            data.data[1].avatar,
+            data.data[2].avatar,
+            data.data[3].avatar,
+            data.data[4].avatar,
+            data.data[5].avatar,
+        ];
 
+        // fill in photos for trat information divs
+        const tratImageDiv = document.getElementById("trat-foto-div");
+        for (const i of images) {
+            const img = document.createElement("img");
+            img.src = i;
+            img.classList.add("info-img");
+            tratImageDiv.appendChild(img);
+        };
+        let img = document.createElement("img");
+        img.src = "https://www.water-right.com/wp-content/uploads/2021/01/Well-Water-Homeowner.jpg";
+        img.classList.add("info-img");
+        tratImageDiv.appendChild(img);
+        
+        // fill in photos for reg estanques 1 and 2
+        // const regImageDiv1 = document.getElementById("reg-foto-1-div");
+        // for (const i of images) {
+        //     const img = document.createElement("img");
+        //     img.src = i;
+        //     img.classList.add("info-img");
+        //     regImageDiv1.appendChild(img);
+        // };
+        const regImageDiv2 = document.getElementById("reg-foto-2-div");
+        for (const i of images) {
+            const img = document.createElement("img");
+            img.src = i;
+            img.classList.add("info-img");
+            regImageDiv2.appendChild(img);
+        };
     };
 
     function clearInfo() {
-        // clear information put in both the information divs
+        // clear information put in trat information div
         const infoDivTrat = document.getElementById("info-div-trat");
         const pElementsTrat = infoDivTrat.getElementsByTagName("p");
-
         for (const p of pElementsTrat) {
             p.innerHTML = "";
         }
 
+        // clear information put in reg information div
         const infoDivReg = document.getElementById("info-div-reg");
         const pElementsReg = infoDivReg.getElementsByTagName("p");
-
         for (const p of pElementsReg) {
             p.innerHTML = "";
         }
+
+        // clear images put in trat photo div
+        const tratImageDiv = document.getElementById("trat-foto-div");
+        while (tratImageDiv.firstChild) {
+            tratImageDiv.removeChild(tratImageDiv.firstChild);
+        };
+        
+        // clear images put in reg estanques 1 and 2 photo divs
+        const regImageDiv1 = document.getElementById("reg-foto-1-div");
+        while (regImageDiv1.firstChild) {
+            regImageDiv1.removeChild(regImageDiv1.firstChild);
+        };
+        const regImageDiv2 = document.getElementById("reg-foto-2-div");
+        while (regImageDiv2.firstChild) {
+            regImageDiv2.removeChild(regImageDiv2.firstChild);
+        };
+
 
         // hide both the information divs, the footer, and show the title
         document.getElementById("info-div-trat").hidden = true;
@@ -126,7 +174,10 @@ export default function Trat() {
                     </div>
 
                     <div class="col-lg-12">
-                        <img class="info-image" id="trat-foto" alt="no hay fotos" src=""></img>
+                        <h5>Fotos:</h5>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="image-div" id="trat-foto-div"></div>
                     </div>
                 </div><br/>
 
@@ -201,8 +252,11 @@ export default function Trat() {
                         <p class="info" id="trat1"></p>
                     </div>
                     <div class="col-lg-12">
-                        <img class="info-image" id="reg-foto-1" alt="no hay fotos" src=""></img>
-                    </div><br/>
+                        <h5>Fotos:</h5>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="image-div" id="reg-foto-1-div"></div>
+                    </div>
 
                     <h2>Estanque N°2</h2>
                     <div class="col-lg-12">
@@ -272,7 +326,10 @@ export default function Trat() {
                         <p class="info" id="trat1"></p>
                     </div>
                     <div class="col-lg-12">
-                        <img class="info-image" id="reg-foto-2" alt="no hay fotos" src=""></img>
+                        <h5>Fotos:</h5>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="image-div" id="reg-foto-2-div"></div>
                     </div>
                 </div>
 
