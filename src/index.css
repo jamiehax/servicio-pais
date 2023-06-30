@@ -299,7 +299,8 @@ i {
   border-width: 0rem;
 }
 
-.search-input-group {
+.search-input-group,
+.bomba-input-group {
   width: 100%;
   display: flex;
 }
@@ -307,6 +308,20 @@ i {
 .search-input {
   width: 100%;
   flex-grow: 1;
+  margin-bottom: 1rem;
+  margin-top: 0.4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  font-weight: 450;
+  border-radius: 10px;
+  border-width: 0rem;
+}
+
+.bomba-input {
+  width: auto;
   margin-bottom: 1rem;
   margin-top: 0.4rem;
   padding-top: 0.5rem;

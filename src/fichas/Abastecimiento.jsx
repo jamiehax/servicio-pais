@@ -1,5 +1,6 @@
 import { React } from 'react';
 import SearchFicha from '../SearchFicha';
+import Bombas from './Bombas';
 
 export default function Abastecimiento() {
 
@@ -14,7 +15,12 @@ export default function Abastecimiento() {
     for (const p of pElements) {
       p.innerHTML = data.token;
     }
+
+    // put bombas data into var to pass as hook to bombas component
+    bombas = data.data;
   };
+
+  let bombas;
 
   function clearInfo() {
     // clear information put in the div
@@ -116,90 +122,7 @@ export default function Abastecimiento() {
                   <label class="form-label">Abastecimiento</label>
                   <p class="info" id="abastecimiento17"></p>
                 </div>
-        
-                <h2>Tipo de Bomba N° 1</h2>
-                <div class="col-lg-6">
-                  <label>Sumergible</label>
-                  <p class="info" id="abastecimiento19"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Superficie</label>
-                  <p class="info" id="abastecimiento20"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Sistema Hidroneumatico</label>
-                  <p class="info" id="abastecimiento21"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Marca</label>
-                  <p class="info" id="abastecimiento22"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Modelo</label>
-                  <p class="info" id="abastecimiento23"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Vol</label>
-                  <p class="info" id="abastecimiento24"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>P [Hp]</label>
-                  <p class="info" id="abastecimiento25"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Q Medido[L/s]</label>
-                  <p class="info" id="abastecimiento26"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Fecha de Instalación</label>
-                  <p class="info" id="abastecimiento27"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Coordenadas UTM</label>
-                  <p class="info" id="abastecimiento28"></p>
-                </div>
-        
-                <h2>Tipo de Bomba N° 2</h2>
-                <div class="col-lg-6">
-                  <label>Sumergible</label>
-                  <p class="info" id="abastecimiento29"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Superficie</label>
-                  <p class="info" id="abastecimiento30"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Sistema Hidroneumatico</label>
-                  <p class="info" id="abastecimiento31"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Marca</label>
-                  <p class="info" id="abastecimiento32"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Modelo</label>
-                  <p class="info" id="abastecimiento33"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Vol</label>
-                  <p class="info" id="abastecimiento34"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>P [Hp]</label>
-                  <p class="info" id="abastecimiento35"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Q Medido[L/s]</label>
-                  <p class="info" id="abastecimiento36"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Fecha de Instalación</label>
-                  <p class="info" id="abastecimiento37"></p>
-                </div>
-                <div class="col-lg-6">
-                  <label>Coordenadas UTM</label>
-                  <p class="info" id="abastecimiento38"></p>
-                </div>
+                {<Bombas bombas={bombas}/>}
               </div>
 
               <div class="row" id="fundacion-footer" hidden>
